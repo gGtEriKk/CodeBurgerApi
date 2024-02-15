@@ -1,4 +1,4 @@
-import User from "../models/User"
+import User from "../models/User.js"
 import * as Yup from 'yup'
 
 const { v4 } = require("uuid")
