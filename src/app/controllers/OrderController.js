@@ -101,6 +101,26 @@ class OrderController {
 
         return response.status(200).json({ message: "Order status updated successfully!" })
     }
+
+    async delete(request, response){
+        const { admin: isAdmin } = await User.findByPk(request.userId)
+
+        if(!isAdmin){
+            return response.status(401).json({})
+        }
+    
+        const { id } = request.params
+    
+        try{
+            await Order.deleteOne({_id: id})
+        }catch(error){
+            return response.status(400).json({ error: error.message })
+        }
+    
+        return response.status(200).json({ message: 'Order deleted successfully!' })
+    }
+
+    
 }
 
 export default new OrderController()
