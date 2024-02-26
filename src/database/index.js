@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize'
 import mongoose from 'mongoose'
 
-import configDatabase from '../config/database'
+// import configDatabase from '../config/database'
 
 import User from '../app/models/User.js'
 import Product from '../app/models/Product.js'
@@ -16,8 +16,8 @@ class Database {
     }
 
     init() {
-        this.connection = new Sequelize(configDatabase, 
-            // 'postgresql://postgres:1cEedcE22C5aF6236bfG1**5bB6*e11C@viaduct.proxy.rlwy.net:49551/railway'
+        this.connection = new Sequelize(
+            'postgresql://postgres:1cEedcE22C5aF6236bfG1**5bB6*e11C@viaduct.proxy.rlwy.net:49551/railway'
         )
         models.map((model) => model.init(this.connection))
             .map(
