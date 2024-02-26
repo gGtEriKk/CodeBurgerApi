@@ -27,8 +27,8 @@ class Database {
 
     mongo() {
         this.mongoConnection = mongoose.connect(
-            'mongodb://localhost:27017/codeburger',
-            // 'mongodb://mongo:15E2F63ah21E-E2dHaEdd1AfF6e6HB25@roundhouse.proxy.rlwy.net:46441'
+            // 'mongodb://localhost:27017/codeburger',
+            'mongodb://mongo:15E2F63ah21E-E2dHaEdd1AfF6e6HB25@roundhouse.proxy.rlwy.net:46441'
         )
     }
 }
