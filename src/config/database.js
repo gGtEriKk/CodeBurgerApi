@@ -12,11 +12,11 @@
 
 module.exports = {
   dialect: 'postgres',
-  url: 'postgresql://postgres:CGEf41Aaa4B*fd*DDDD-Gagb56-c52cd@monorail.proxy.rlwy.net:41012/railway',
-  // host: 'localhost',
-  // username: 'postgres',
-  // password: 'erikdev',
-  // database: 'codeburger',
+  // url: 'postgresql://postgres:CGEf41Aaa4B*fd*DDDD-Gagb56-c52cd@monorail.proxy.rlwy.net:41012/railway',
+  host: 'localhost',
+  username: 'postgres',
+  password: 'erikdev',
+  database: 'codeburger',
   define: {
     timestamps: true /* adiciona os campos 'createdAt' e 'updatedAt' automaticamente, ao criar um dado */,
     underscored: true,
